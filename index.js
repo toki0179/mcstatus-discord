@@ -9,8 +9,7 @@ const client = new Discord.Client();
 
 client.once('ready', async () => {
 	console.log('Ready!');
-        
-	
+        client.user.setActivity('Checking Minecraft Server Status')
 });
 
 client.login(token);
