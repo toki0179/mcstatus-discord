@@ -9,5 +9,5 @@ MCStatus Bot displays a minecraft server status
 
 - Make sure nodejs 14 is installed
 - Run `npm i` to install all the dependencies
-- Edit the settings in config.json
+- Edit the settings in `config.json`
 - Now it is ready and you can start the bot using `node .`
