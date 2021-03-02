@@ -1,5 +1,5 @@
 {
-  "name": "tokibot",
+  "name": "mcstatus",
   "version": "1.0.0",
   "description": "Discord Bot",
   "main": "index.js",
