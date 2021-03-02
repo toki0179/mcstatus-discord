@@ -1,4 +1,5 @@
 {
 	"token": "Bot-Token-Here",
-	"channel": "Channel-ID-Here"
+	"channel": "Channel-ID-Here",
+	"server": "Server-IP-Here"
 }
