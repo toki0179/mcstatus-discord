@@ -2,8 +2,7 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const { token } = require('./config.json');
 const { channel } = require('./config.json');
-const { ShardingManager } = require('discord.js');
-
+const { server } = require('./config.json');
 
 const client = new Discord.Client();
 
