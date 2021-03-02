@@ -9,7 +9,7 @@ client.once('ready', async() => {
 	client.user.setActivity('Checking Minecraft Server Status')
 	let i = 0
 	  util.status(server) // port is default 25565
-		  .then((response) => {
+		  .then(async(response) => {
 
 		  const embed = new Discord.MessageEmbed()
 		  .setTitle(`${response.host}'s Status: `)
