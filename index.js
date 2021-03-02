@@ -6,7 +6,7 @@ const client = new Discord.Client();
 
 client.once('ready', async() => {
 	console.log('Ready!');
-	client.user.setActivity('Checking Minecraft Server Status')
+	client.user.setActivity('toki0179/mcStatus-discord')
 	let i = 0
 	  util.status(server) // port is default 25565
 		  .then(async(response) => {
