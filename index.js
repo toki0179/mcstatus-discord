@@ -6,32 +6,34 @@ const { server } = require('./config.json');
 const util = require('minecraft-server-util');
 const client = new Discord.Client();
 
-client.once('ready', async () => {
+client.once('ready', async() => {
 	console.log('Ready!');
-        client.user.setActivity('Checking Minecraft Server Status')
+	client.user.setActivity('Checking Minecraft Server Status')
 	let i = 0
-	setInterval(() => , 600000);
-	util.status(server) // port is default 25565
-    	.then((response) => {
-        	let playersOnline = response.playersOnline
-		let serverHost = response.host
-		let serverPort = response.port
-		let serverMax = response.maxPlayers
-		let serverVer = response.version
+	  util.status(server) // port is default 25565
+		  .then((response) => {
+		  let playersOnline = response.onlinePlayers
+		  let serverHost = response.host
+		  let serverPort = response.port
+		  let serverMax = response.maxPlayers
+		  let serverVer = response.version
 		
-		const embed = new Discord.messageEmbed()
-		.setTitle(`${serverHost} Status: `)
-		.addFields(
-			{ name: `Players Online: `, value: `${playersOnline}` },
-			{ name: `Max players:`, value: `${serverMax}` },
-			{ name: `Server Host: `, value:`${serverHost}:${serverPort}` },
-			{ name: `Version:`, value: `${serverVer}` }
-		)
-		.setFooter('Created by toki#0999')
-		
-		var Msg = client.channels.get(channelid).send(embed);
-			setInterval(() => Msg.edit(embed), 60);
-    })
+		  const embed = new Discord.MessageEmbed()
+		  .setTitle(`${serverHost}'s Status: `)
+		  .addFields(
+			  { name: `Players Online: `, value: `${playersOnline}`, },
+			  { name: `Max Players: `, value: `${serverMax}`, },
+			  { name: `Server IP: `, value:`${serverHost}`, }, 
+			  { name: `Version:`, value: `${serverVer}` }
+		  )
+		  .setFooter('Created by toki#0999')
+		  channel = client.channels.cache.get(channelid)
+		  let msg = await channel.send(embed)
+		  setInterval((), async() => {
+			  msg.edit(embed);
+		  }, 60)
+
+	  })
 
 });
 
