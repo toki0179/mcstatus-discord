@@ -12,7 +12,7 @@ client.once('ready', async() => {
 		  .then(async(response) => {
 
 		  const embed = new Discord.MessageEmbed()
-		  .setTitle(`${response.host}'s Status: `)
+		  .setTitle(`Server Status: `)
 		  .addFields(
 			  { name: `Players Online: `, value: `${response.onlinePlayers}`, },
 			  { name: `Max Players: `, value: `${response.maxPlayers}`, },
