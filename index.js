@@ -1,4 +1,3 @@
-const fs = require('fs');
 const Discord = require('discord.js');
 const { token, channelid, server } = require('./config.json');
 const util = require('minecraft-server-util');
