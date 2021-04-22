@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "discord.js": "^12.5.1",
-    "minecraft-server-util": "^3.4.3",
+    "minecraft-server-util": "^3.5.1",
     "nodemon": "^2.0.7"
   },
   "devDependencies": {},
